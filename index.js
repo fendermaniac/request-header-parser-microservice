@@ -3,6 +3,8 @@ import express from 'express';
 const app = express();
 const PORT = 3000;
 
+app.set('trust proxy',true); 
+
 const parseHeaders = (req, res) => {
     let ip = req.ip;
     let language = req.headers['accept-language'];
